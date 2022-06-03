@@ -22,7 +22,6 @@ const tablesReducer = (statePart = [], action) => {
     case EDIT_TABLE:
         return statePart.map(table => (table.id === action.payload.tableId) ? {...table, status: action.payload.statusState, peopleAmount:action.payload.people, maxPeopleAmount:action.payload.peopleMax, bill:action.payload.bill } : table);
     case UPDATE_TABLE:
-        console.log(action.payload)
         return [...action.payload]
     default:
       return statePart;

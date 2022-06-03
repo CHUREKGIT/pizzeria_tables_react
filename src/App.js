@@ -10,10 +10,13 @@ import { fetchTable } from './redux/tablesRedux';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 
+
 function App() {
+
   const dispatch = useDispatch();
 
   useEffect(() => dispatch(fetchTable()), [dispatch]); 
+
 
   return (
     <Container>
